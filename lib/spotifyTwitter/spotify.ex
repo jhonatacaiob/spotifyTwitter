@@ -9,7 +9,7 @@ defmodule SpotifyTwitter.Spotify do
 
   defp handle_response({:ok, response}), do: {:ok, format_response(response.item)}
 
-  defp handle_response(:ok), do: {:ok, "Nenhuma musica tocando no momento"}
+  defp handle_response(:ok), do: {:ok, ""}
 
   defp format_response(response),
     do: "#{get_music_name(response)} - #{get_artists_name(response)}"
