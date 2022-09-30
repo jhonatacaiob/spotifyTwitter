@@ -9,6 +9,7 @@ import Config
 
 import_config "secret.exs"
 import_config "spotify.exs"
+import_config "twitter.exs"
 
 # Configures the endpoint
 config :spotifyTwitter, SpotifyTwitterWeb.Endpoint,

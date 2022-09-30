@@ -42,7 +42,10 @@ defmodule SpotifyTwitter.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:spotify_ex, "~> 2.3.0"}
+      {:spotify_ex, "~> 2.3.0"},
+      {:oauther, "~> 1.1"},
+      {:jason, "~> 1.1"},
+      {:extwitter, "~> 0.12"},
     ]
   end
 

@@ -24,3 +24,4 @@ spotifyTwitter-*.tar
 
 /config/secret.exs
 /config/spotify.exs
+/config/twitter.exs
