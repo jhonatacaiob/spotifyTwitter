@@ -8,10 +8,12 @@ defmodule SpotifyTwitterWeb.Router do
   scope "/", SpotifyTwitterWeb do
     pipe_through :api
 
-    get "/auth", SpotifyAuthFlowController, :authorize
-    get "/spotify-redirect", SpotifyAuthFlowController, :authenticate
+    get "/spotify/auth", SpotifyAuthFlowController, :authorize
+    get "/spotify/redirect", SpotifyAuthFlowController, :authenticate
+    get "/spotify/get_name_music", SpotifyController, :index
 
-    get "/get_name_music", SpotifyController, :index
+
+
   end
 
   # Enables LiveDashboard only for development

@@ -13,6 +13,6 @@ defmodule SpotifyTwitterWeb.SpotifyController do
     |> render("teste.json", message: music_name)
   end
 
-  def handle_response(:unauthorized, conn), do: redirect(conn, to: "/auth")
+  def handle_response(:unauthorized, conn), do: redirect(conn, to: "/spotify/auth")
 
 end

@@ -7,7 +7,7 @@ defmodule SpotifyTwitterWeb.SpotifyAuthFlowController do
 
   def authenticate(conn, params) do
     case Spotify.Authentication.authenticate(conn, params) do
-      {:ok, conn} -> redirect(conn, to: "/get_name_music")
+      {:ok, conn} -> redirect(conn, to: "/spotify/get_name_music")
       {:error, reason, conn} -> redirect(conn, to: "/error")
     end
   end
