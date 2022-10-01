@@ -19,7 +19,7 @@ defmodule SpotifyTwitter.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      applications: [:phoenix, :cowboy, :logger, :spotify_ex, :poison],
+      applications: [:phoenix, :cowboy, :logger, :spotify_ex, :poison, :extwitter],
       mod: {SpotifyTwitter.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
@@ -45,6 +45,7 @@ defmodule SpotifyTwitter.MixProject do
       {:spotify_ex, "~> 2.3.0"},
       {:oauther, "~> 1.1"},
       {:extwitter, "~> 0.12"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 
