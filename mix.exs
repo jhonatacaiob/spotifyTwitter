@@ -44,7 +44,6 @@ defmodule SpotifyTwitter.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:spotify_ex, "~> 2.3.0"},
       {:oauther, "~> 1.1"},
-      {:jason, "~> 1.1"},
       {:extwitter, "~> 0.12"},
     ]
   end

@@ -1,5 +1,5 @@
 defmodule SpotifyTwitter.Spotify do
-  def call(conn) do
+  def get_music(conn) do
     conn
     |> Spotify.Player.get_currently_playing()
     |> handle_response()

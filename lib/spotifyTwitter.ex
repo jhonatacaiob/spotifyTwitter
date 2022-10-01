@@ -6,6 +6,4 @@ defmodule SpotifyTwitter do
   Contexts are also responsible for managing your data, regardless
   if it comes from the database, an external API or others.
   """
-
-  defdelegate get_currently_playing_music(conn), to: SpotifyTwitter.Spotify, as: :call
 end

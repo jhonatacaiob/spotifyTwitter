@@ -1,9 +1,11 @@
 defmodule SpotifyTwitterWeb.SpotifyController do
   use SpotifyTwitterWeb, :controller
 
+  alias SpotifyTwitter.Spotify
+
   def index(conn, _params) do
     conn
-    |> SpotifyTwitter.get_currently_playing_music()
+    |> Spotify.get_music()
     |> handle_response(conn)
   end
 
@@ -14,5 +16,4 @@ defmodule SpotifyTwitterWeb.SpotifyController do
   end
 
   def handle_response(:unauthorized, conn), do: redirect(conn, to: "/spotify/auth")
-
 end
