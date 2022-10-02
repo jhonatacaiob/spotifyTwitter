@@ -10,7 +10,7 @@ defmodule SpotifyTwitter.Twitter do
     rescue
       e in ExTwitter.Error ->
         case e.code do
-          89 -> {""}
+          89 -> ""
         end
     end
   end

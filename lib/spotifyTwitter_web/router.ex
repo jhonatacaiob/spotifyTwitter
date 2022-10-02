@@ -15,6 +15,7 @@ defmodule SpotifyTwitterWeb.Router do
     get "/twitter/auth", TwitterAuthFlowController, :authorize
     get "/twitter/redirect", TwitterAuthFlowController, :authenticate
     get "/index", TwitterController, :index
+    get "/index/:description", TwitterController, :index
   end
 
   # Enables LiveDashboard only for development
