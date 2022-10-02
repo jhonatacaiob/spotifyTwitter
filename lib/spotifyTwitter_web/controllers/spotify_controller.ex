@@ -16,4 +16,5 @@ defmodule SpotifyTwitterWeb.SpotifyController do
   end
 
   def handle_response(:unauthorized, conn), do: redirect(conn, to: "/spotify/auth")
+  def handle_response(:bad_request, conn), do: redirect(conn, to: "/spotify/auth")
 end

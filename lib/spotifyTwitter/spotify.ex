@@ -7,6 +7,8 @@ defmodule SpotifyTwitter.Spotify do
 
   defp handle_response({:ok, %{"error" => %{"status" => 401}}}), do: :unauthorized
 
+  defp handle_response({:ok, %{"error" => %{"status" => 400}}}), do: :bad_request
+
   defp handle_response(:ok), do: {:ok, ""}
 
   defp handle_response({:ok, %{item: nil}}), do: {:ok, "Ouvindo um podcast..."}
@@ -18,7 +20,6 @@ defmodule SpotifyTwitter.Spotify do
 
   defp get_artists_name(artists) do
     artists
-    |> Enum.map(& &1["name"])
-    |> Enum.join(", ")
+    |> Enum.map_join(", ", & &1["name"])
   end
 end
