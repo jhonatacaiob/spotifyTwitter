@@ -30,7 +30,7 @@ defmodule SpotifyTwitterWeb.TwitterAuthFlowController do
       access_token_secret: access_token.oauth_token_secret
     )
 
-    redirect(conn, to: "/index")
+    redirect(conn, to: "/spotify/auth")
   end
 
   def get_ambient_vars() do

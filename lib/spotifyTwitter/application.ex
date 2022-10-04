@@ -13,9 +13,10 @@ defmodule SpotifyTwitter.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: SpotifyTwitter.PubSub},
       # Start the Endpoint (http/https)
-      SpotifyTwitterWeb.Endpoint
+      SpotifyTwitterWeb.Endpoint,
       # Start a worker by calling: SpotifyTwitter.Worker.start_link(arg)
       # {SpotifyTwitter.Worker, arg}
+      SpotifyTwitter.SpotifyTwitterGenserver
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

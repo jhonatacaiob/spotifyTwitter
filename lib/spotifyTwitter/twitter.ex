@@ -1,9 +1,9 @@
 defmodule SpotifyTwitter.Twitter do
   import ExTwitter.API.Base
 
-  @string_divider " | "
+  @string_divider "   🎵🎶   "
 
-  def execute_function(function) do
+  defp execute_function(function) do
     try do
       function.()
       |> Map.get(:description)
@@ -32,7 +32,7 @@ defmodule SpotifyTwitter.Twitter do
     |> update_profile_description()
   end
 
-  def get_first_part_of_description(actual_description) do
+  defp get_first_part_of_description(actual_description) do
     actual_description
     |> String.split(@string_divider)
     |> hd()
